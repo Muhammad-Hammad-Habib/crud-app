@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<%- include('./comm/header.ejs') %>
 
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/all.css" />
-  </head>
-  <body>
-    <!-- <h1>index page called</h1> -->
 
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
+<div class="container text-center mx-auto p-2" style="">
+  <div class="row">
+    <div class="col p-2 g-col-6 mt-5" ><%- include('./comm/list.ejs') %></div>
+    <div class="col p-2 g-col-6 mt-5"><%- include('./comm/form.ejs') %></div>
+  </div>
+</div>
 
-    <button type="button" class="btn btn-link">Link</button>
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/all.js"></script>
-  </body>
-</html>
+<%- include('./comm/footer.ejs') %>
