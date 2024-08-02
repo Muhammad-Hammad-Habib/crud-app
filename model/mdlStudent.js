@@ -10,12 +10,11 @@ const studentSchema = new mongoose.Schema({
   date: {
     type: String,
     default: Date.now(),
-  }
+  },
 });
 
 // Model
 
-const studentModel = mongoose.model("students",studentSchema);
+const studentModel = mongoose.model("students", studentSchema);
 
-export default studentModel; 
-   
+export default studentModel;

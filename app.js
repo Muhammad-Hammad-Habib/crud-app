@@ -12,9 +12,8 @@ connectdb();
 app.use("/student", express.static(join(process.cwd(), "public")));
 // Template Engine express
 app.set("view engine", "ejs");
-// web Router 
+// web Router
 app.use("/student", webRoutes);
-
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);

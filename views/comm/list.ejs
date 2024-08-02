@@ -2,14 +2,13 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Date</th>
     </tr>
   </thead>
   <tbody>
-    <% var i = 1; %>
-    <% data.forEach(item => { %>
+    <% var i = 1; %> <% data.forEach(item => { %>
     <tr>
       <th scope="row"><%= i++ %></th>
       <td><%= item.name %></td>
