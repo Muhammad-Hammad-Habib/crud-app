@@ -4,6 +4,6 @@ import control from "../controllers/stdControl.js";
 
 router.get("/", control.getAllData);
 router.post("/", control.insertRecord);
-router.get("/edit", control.getRecordForUpdate);
+router.get("/edit/:id", control.getRecordForUpdate);
 
 export default router;

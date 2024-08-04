@@ -25,6 +25,7 @@ class stdController {
     }
   };
   static getRecordForUpdate = async (req, resp) => {
+    console.log(req.params)
     resp.render("edit");
   };
 }

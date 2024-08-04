@@ -5,6 +5,7 @@
       <th scope="col">Name</th>
       <th scope="col">Age</th>
       <th scope="col">Date</th>
+      <th scope="col">Edit-Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -15,7 +16,10 @@
       <td><%= item.age %></td>
       <td><%= item.date %></td>
       <td>
-        <i class="fas fa-pen-square text-info"></i>
+        <form action="/student/edit/<%= item.id %>" method="get">
+          <i class="fas fa-pen-square text-info"></i>
+        </form>
+
         <i class="fas fa-trash text-danger"></i>
       </td>
     </tr>

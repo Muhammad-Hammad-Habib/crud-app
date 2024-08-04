@@ -13,12 +13,13 @@ app.use(express.urlencoded({extended:false}))
 
 // static EJS file (HTLM)
 app.use("/student", express.static(join(process.cwd(), "public")));
+app.use("/student/edit", express.static(join(process.cwd(), "public")));
 // Template Engine express
 app.set("view engine", "ejs");
 // web Router
 app.use("/student", webRoutes);
 app.use("/student/edit", webRoutes);
-console.log(process.cwd())
+
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
