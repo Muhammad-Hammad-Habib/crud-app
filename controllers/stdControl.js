@@ -25,8 +25,12 @@ class stdController {
     }
   };
   static getRecordForUpdate = async (req, resp) => {
-    console.log(req.params)
-    resp.render("edit");
+    try {
+      const result = await studentModel.findById(req.params);
+      resp.render("edit", { data: result });
+    } catch (error) {
+      console.log(`Issue in getRecordForUpdate in stdControl => ${error}`);
+    }
   };
 }
 
