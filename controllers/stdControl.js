@@ -9,11 +9,17 @@ class stdController {
       console.log(`Issue in getAllData in stdControl => ${error}`);
     }
   };
-  static insertRecord = (req, resp) => {
+  static insertRecord = async (req, resp) => {
     try {
-      console.log("insertRecord");
-      console.log(req.body);
-      resp.redirect("/student");
+      const data = new studentModel(req.body);
+      const result = await data.save();
+      if (result) {
+        console.log("Record has inserted");
+        console.log(result);
+        resp.redirect("/student");
+      } else {
+        console.log(`Record has inserted ${result}`);
+      }
     } catch (error) {
       console.log(`Issue in insertRecord in stdControl => ${error}`);
     }
