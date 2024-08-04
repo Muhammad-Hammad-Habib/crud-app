@@ -24,6 +24,9 @@ class stdController {
       console.log(`Issue in insertRecord in stdControl => ${error}`);
     }
   };
+  static getRecordForUpdate = async (req, resp) => {
+    resp.render("edit");
+  };
 }
 
 export default stdController;
