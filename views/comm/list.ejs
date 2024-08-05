@@ -26,7 +26,15 @@
           </button>
         </form>
 
-        <i class="fas fa-trash text-danger"></i>
+        <form
+          action="/student/delete/<%= item.id %>"
+          method="post"
+          class="d-inline"
+        >
+          <button type="submit">
+            <i class="fas fa-trash text-danger"></i>
+          </button>
+        </form>
       </td>
     </tr>
     <% }) %>
